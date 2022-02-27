@@ -62,8 +62,8 @@ export function App() {
         </div>
       </div>
 
-      <section class="grid grid-cols-2 gap-y-12 gap-x-4 px-4 font-light">
-        <div class="col-span-2 text-sm ">
+      <section class="grid grid-cols-2 gap-y-12 gap-x-4 px-4 text-sm font-light md:flex">
+        <div class="col-span-2 md:col-auto ">
           <img src={data.intro.imgURL} alt="pic 2" />
           <div class="">
             <h3 class="font-bold">Modular Packaging</h3>
@@ -75,7 +75,7 @@ export function App() {
         </div>
 
         {[...Array(2)].map((num) => (
-          <div key={num} class="text-sm">
+          <div key={num}>
             <img src={data.intro.imgURL} alt="pic 2" />
             <div>
               <h3 class="font-bold">{data.intro.name}</h3>
