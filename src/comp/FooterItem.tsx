@@ -14,7 +14,7 @@ const FooterItem = (props: Props) => {
   return (
     <div class={"flex flex-col gap-y-1 " + props.class}>
       <button onClick={toggleVisible} class="flex justify-between py-1">
-        <h4 class="text-base font-bold">{props.title}</h4>
+        <h4 class="font-bold">{props.title}</h4>
         <p>+</p>
       </button>
       <div
