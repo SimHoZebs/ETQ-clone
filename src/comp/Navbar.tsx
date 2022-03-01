@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <nav
-      class={`fixed left-0 top-0 m-1 flex w-[calc(100%-0.5rem)] items-center justify-between p-1 px-4 ${
+      class={`fixed left-0 top-0 m-1 flex w-[calc(100%-0.5rem)] items-center justify-between p-1 px-4 lg:px-8 ${
         atTop ? "" : ""
       }`}
     >

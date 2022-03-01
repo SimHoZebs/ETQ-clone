@@ -29,7 +29,7 @@ const FavModels = () => {
   }
 
   return (
-    <section class=" flex flex-col px-4">
+    <section class=" flex flex-col px-4 lg:px-8">
       <div class="flex flex-row items-center justify-between">
         <h2 class="text-2xl">Our favorite models</h2>
         <div class="flex gap-x-2">

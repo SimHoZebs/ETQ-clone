@@ -2,8 +2,8 @@ import FooterItem from "./FooterItem";
 
 const Footer = () => {
   return (
-    <footer class="flex flex-col gap-y-4 p-4 text-sm font-light">
-      <FooterItem title="About">
+    <footer class="<lg:flex-col lg:(px-8 font-normal grid grid-cols-6 gap-x-6) flex gap-y-4 p-4 text-base text-sm font-light">
+      <FooterItem title="About" class="col-span-2">
         <div>
           <span>
             Founded in 2010 in Amsterdam, ETQ derived under the mindset of
@@ -24,7 +24,7 @@ const Footer = () => {
         </a>
       </FooterItem>
 
-      <FooterItem title="Contact" class="md:hidden">
+      <FooterItem title="Contact" class="md:hidden lg:block">
         <a href="mailto:">Email us</a>
         <a href="tel:+31202256153">+31 (0) 20 22 56 153</a>
       </FooterItem>
@@ -42,35 +42,10 @@ const Footer = () => {
         <a href="/">Pinterest</a>
       </FooterItem>
 
-      <div class="<md:hidden flex flex-col gap-y-2 font-normal">
+      <div class="<md:hidden flex flex-col gap-y-2 font-normal lg:hidden">
         <a href="mailto:">Email us</a>
         <a href="tel:+31202256153">+31 (0) 20 22 56 153</a>
       </div>
-
-      <div class="gap-x-4 md:flex">
-        <h4 class="font-bold md:font-normal">Newsletter</h4>
-        <form class="flex w-full gap-x-4" action="">
-          <input
-            class="w-full max-w-sm border-b border-gray-400 outline-0"
-            type="email"
-            name=""
-            id=""
-          />
-          <button class="" type="submit">
-            Submit
-            <hr class="border-black" />
-          </button>
-        </form>
-      </div>
-
-      <p>
-        This site is a copy of a brilliant site{" "}
-        <a class="underline" href="https://etq-amsterdam.com">
-          {" "}
-          etq.amsterdam.com
-        </a>{" "}
-        built as a submission for club application.
-      </p>
     </footer>
   );
 };
