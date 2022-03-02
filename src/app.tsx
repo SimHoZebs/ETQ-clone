@@ -62,11 +62,11 @@ export function App() {
 
       <Footer />
 
-      <div class="gap-x-4 px-4 md:flex">
+      <div class="gap-x-4 px-4 lg:px-8 md:flex">
         <h4 class="font-bold md:font-normal">Newsletter</h4>
         <form class="flex w-full gap-x-4" action="">
           <input
-            class="w-full max-w-sm border-b border-gray-400 outline-0"
+            class="w-full max-w-sm border-b border-gray-400 outline-0 lg:max-w-xs"
             type="email"
             name=""
             id=""
@@ -78,7 +78,7 @@ export function App() {
         </form>
       </div>
 
-      <p class="px-4">
+      <p class="px-4 lg:px-8">
         This site is a copy of a brilliant site{" "}
         <a class="underline" href="https://etq-amsterdam.com">
           {" "}

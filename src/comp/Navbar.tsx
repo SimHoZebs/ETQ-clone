@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react";
 import { useEffect, useState } from "preact/hooks";
 
 const Navbar = () => {
@@ -20,19 +21,33 @@ const Navbar = () => {
 
   return (
     <nav
-      class={`fixed left-0 top-0 m-1 flex w-[calc(100%-0.5rem)] items-center justify-between p-1 px-4 lg:px-8 ${
+      class={`fixed left-0 top-0 m-1 flex w-[calc(100%-0.5rem)] items-center justify-between py-1 px-4 lg:(px-8 py-4 m-2) ${
         atTop ? "" : ""
       }`}
     >
-      <button class="flex h-6 w-6 flex-col justify-between py-1">
-        <div class="h-[2px] w-full bg-black"></div>
-        <div class="h-[2px] w-full bg-black"></div>
-        <div class="h-[2px] w-full bg-black"></div>
+      <button class="flex h-8 w-8 items-center py-1 lg:hidden">
+        <Icon icon="mdi:menu" width="36" height="36" />
       </button>
-      <h1 class="text-3xl font-black">Company</h1>
-      <button class="h-6 w-6 rounded-full bg-black text-xs text-white">
-        0
-      </button>
+
+      <div class="flex gap-x-4 items-center">
+        <h1 class="text-3xl font-black">Company</h1>
+        <div class="<lg:hidden flex gap-x-4 self-center">
+          <button>Shop All</button>
+          <button>Permanent Collection</button>
+          <button>Shoecare</button>
+        </div>
+      </div>
+
+      <div class="flex gap-x-4">
+        <div class="flex gap-x-4 <lg:hidden">
+          <button>Search</button>
+          <button>Help</button>
+          <button>My Account</button>
+        </div>
+        <button class="h-6 w-6 rounded-full bg-black text-xs text-white">
+          0
+        </button>
+      </div>
       <div
         class={`absolute top-0 left-0 -z-10 h-full w-full duration-150 ${
           atTop ? "" : "bg-white opacity-95"
