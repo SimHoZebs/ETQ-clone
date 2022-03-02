@@ -3,6 +3,7 @@ import { useEffect, useState } from "preact/hooks";
 
 const Navbar = () => {
   const [atTop, setAtTop] = useState(true);
+  const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
@@ -11,18 +12,35 @@ const Navbar = () => {
     };
   }, []);
 
+  let timer: null | number = null;
+
   function onScroll() {
+    setScrolling(true);
+
     if (document.documentElement.scrollTop !== 0) {
       setAtTop(false);
     } else {
       setAtTop(true);
     }
+
+    if (timer !== null) {
+      clearTimeout(timer);
+    }
+
+    timer = setTimeout(() => {
+      console.log("yo");
+      setScrolling(false);
+    }, 300);
   }
 
   return (
     <nav
       class={`fixed left-0 top-0 m-1 flex w-[calc(100%-0.5rem)] items-center justify-between py-1 px-4 lg:(px-8 py-4 m-2) ${
         atTop ? "" : ""
+      } ${
+        (scrolling && !atTop) || (!scrolling && atTop)
+          ? ""
+          : "duration-1000 opacity-0"
       }`}
     >
       <button class="flex h-8 w-8 items-center py-1 lg:hidden">
