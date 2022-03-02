@@ -1,7 +1,7 @@
 import data from "./data";
 import Footer from "./comp/Footer";
 import Navbar from "./comp/Navbar";
-import FavModels from "./comp/FavModels";
+import FavSection from "./comp/FavModels";
 import IntroCard from "./comp/IntroCard";
 
 export function App() {
@@ -48,7 +48,7 @@ export function App() {
         ))}
       </section>
 
-      <FavModels />
+      <FavSection />
 
       <section class="md:(flex gap-x-6) px-4 lg:px-8">
         {[...Array(2)].map((num) => (
