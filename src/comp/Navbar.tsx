@@ -1,4 +1,3 @@
-import { Icon } from "@iconify/react";
 import { useEffect, useState } from "preact/hooks";
 
 import data from "../data";
@@ -44,7 +43,7 @@ const Navbar = () => {
           class="flex h-8 w-8 items-center py-1 lg:hidden"
           onClick={openMenu}
         >
-          <Icon icon="mdi:menu" width="36" height="36" />
+          <span class="iconify" data-icon="mdi:menu" width="36" height="36" />
         </button>
         <div class="flex gap-x-4 items-center">
           <h1 class="text-3xl font-black pr-8">Logo</h1>
@@ -90,10 +89,10 @@ const Navbar = () => {
                 item === "Shoecare" ? (
                   ""
                 ) : (
-                  <Icon icon="akar-icons:chevron-right" />
+                  <span class="iconify" data-icon="akar-icons:chevron-right" />
                 )
               ) : (
-                <Icon icon="mdi:magnify" />
+                <span class="iconify" data-icon="mdi:magnify" />
               )}
             </div>
             <hr class="border-t w-full border-t-gray-200" />
