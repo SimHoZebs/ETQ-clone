@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <nav
-      class={`fixed left-0 top-0 m-1 w-[calc(100%-0.5rem)] py-1 lg:(px-8 py-4 m-2) ${
+      class={`fixed left-0 top-0 z-10 m-1 w-[calc(100%-0.5rem)] py-1 lg:(px-8 py-4 m-2) ${
         atTop ? "" : ""
       } ${scrolling || atTop || menuOpen ? "" : "duration-1000 opacity-0"}`}
     >

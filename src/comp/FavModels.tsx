@@ -23,7 +23,20 @@ const FavSection = () => {
   }
 
   return (
-    <section class=" flex flex-col px-4 lg:px-8">
+    <section class=" flex flex-col px-4 lg:px-8 relative">
+      <button
+        class="absolute left-4 top-1/2 md:hidden rounded-1 border border-gray-100 bg-gray-100 opacity-70 p-2"
+        onClick={() => scrollTo(-1)}
+      >
+        <Icon icon="akar-icons:chevron-left" />
+      </button>
+
+      <button
+        class="absolute right-4 top-1/2 rounded-1 md:hidden border border-gray-100 bg-gray-100 opacity-70 p-2"
+        onClick={() => scrollTo(1)}
+      >
+        <Icon icon="akar-icons:chevron-right" />
+      </button>
       <div class="flex flex-row items-center justify-between">
         <h2 class="text-2xl">Our favorite models</h2>
         <div class="flex gap-x-2">
