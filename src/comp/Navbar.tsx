@@ -1,11 +1,14 @@
 import { useEffect, useState } from "preact/hooks";
 
 import data from "../data";
+import Magnify from "../icons/Magnify";
+import Menu from "../icons/Menu";
+import Right from "../icons/Right";
 
 const Navbar = () => {
   const [atTop, setAtTop] = useState(true);
   const [scrolling, setScrolling] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
@@ -43,7 +46,7 @@ const Navbar = () => {
           class="flex h-8 w-8 items-center py-1 lg:hidden"
           onClick={openMenu}
         >
-          <span class="iconify" data-icon="mdi:menu" width="36" height="36" />
+          <Menu />
         </button>
         <div class="flex gap-x-4 items-center">
           <h1 class="text-3xl font-black pr-8">Logo</h1>
@@ -80,21 +83,21 @@ const Navbar = () => {
       >
         {data.menu.map((item, i) => (
           <div key={i} class="w-full">
-            <div class="flex justify-between items-center px-4 py-6">
-              <button class="border-b duration-300 hover:(border-black) border-white">
+            <button class="flex justify-between items-center px-4 py-6 w-full">
+              <div class="border-b duration-300 hover:(border-black) border-white">
                 {item}
-              </button>
+              </div>
 
               {item !== "Search" ? (
                 item === "Shoecare" ? (
                   ""
                 ) : (
-                  <span class="iconify" data-icon="akar-icons:chevron-right" />
+                  <Right />
                 )
               ) : (
-                <span class="iconify" data-icon="mdi:magnify" />
+                <Magnify />
               )}
-            </div>
+            </button>
             <hr class="border-t w-full border-t-gray-200" />
           </div>
         ))}
