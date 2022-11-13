@@ -1,6 +1,6 @@
 ## Introduction
 
-This is a clone of a shoe website in Amsterdam called (ETQ)[https://etq.amsterdam.com]. It was to compete for one empty spot in a programming club.
+This is a clone of a shoe website in Amsterdam called [ETQ](https://etq.amsterdam.com). It was to compete for one empty spot in a programming club.
 
 Built using Preact, Vite and WindiCSS.
 
