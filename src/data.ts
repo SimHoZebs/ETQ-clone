@@ -1,7 +1,6 @@
 const data = {
   intro:
   {
-    imgURL: "https://cdn.shopify.com/s/files/1/0505/9044/9849/articles/Journal_Our_Journey_640x.jpg?v=1621352533",
     name: "Example title",
     desc: "Unboxing like never before."
   },
